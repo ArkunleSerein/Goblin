@@ -25,10 +25,14 @@ h4 {
 
 /* Header */
 
+.dropdown-btn {
+  display: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 header a:hover {
@@ -86,7 +90,7 @@ section {
   border-width: 1px;
   border-radius: 25px;
   padding: 1vw 1vw;
-  margin-right: 2vw ;
+  margin-right: 2vw;
   font-size: 1vw;
   text-align: center;
 }
@@ -161,36 +165,92 @@ img {
 /* ... */
 /* Styles à appliquer pour les ordinateurs de bureau et les écrans larges avec une largeur minimale de 1200 pixels */
 @media (min-width: 1440px) {
-  
+
   /* Styles spécifiques aux ordinateurs de bureau et écrans larges */
   /* ... */
 }
+
 /* Styles à appliquer pour les tablettes avec une largeur minimale de 768 pixels */
-@media (max-width: 1024px) { section {
-  left: 10vw;
-  top: 10vw;}
+@media (max-width: 1024px) {
+  section {
+    left: 10vw;
+    top: 10vw;
+  }
+
   /* Styles spécifiques aux tablettes */
   /* ... */
 }
+
 /* Styles à appliquer pour les téléphones mobiles avec une largeur maximale de 767 pixels */
 @media (max-width: 767px) {
+  
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
   img {
-    margin-top: 10vw;
-    width: 50vw;
+    margin-top: 50vw;
+    width: 75vw;
   }
 
   .social-icons a {
-    font-size: 6vw;
+    font-size: 28px;
   }
 
   section {
-    left: 20vw;
-    top: 20vw;
+    left: 12vw;
+    top: 23vw;
   }
-  /* Styles spécifiques aux téléphones mobiles */
-  /* ... */
 
+  .dropdown-btn {
+    display: block;
+    margin: 10px 20px;
+    background-color: #4caf4fb7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .navbar {
+    display: grid;
+    position: absolute;
+    background-color: #ad282800;
+    padding: 0;
+    right: 0;
+    list-style-type: armenian;
+    margin: 0;
+    grid-column: 2;
+  }
+
+  .navbar li {
+    display: block;
+  }
+
+  .navbar li a {
+    display: block;
+    padding: 10px;
+    text-decoration: solid;
+    color: rgb(248, 248, 248);
+  }
+
+  .dropdown-btn:hover+.navbar {
+    display: grid;
+    background-color: aqua;
+
+  }
 }
+
+/* Style de base pour le menu de navigation */
+
+
+
+/* Styles spécifiques aux téléphones mobiles */
+/* ... */
+
+
 
 /* Styles à appliquer pour les tablettes avec une largeur minimale de 768 pixels */
 @media (min-width: 768px) {
@@ -200,7 +260,7 @@ img {
 
 /* Styles à appliquer pour les ordinateurs de bureau et les écrans larges avec une largeur minimale de 1200 pixels */
 @media (min-width: 1200px) {
- 
+
   /* Styles spécifiques aux ordinateurs de bureau et écrans larges */
   /* ... */
 }
