@@ -5,6 +5,10 @@ body {
   height: 100vh;
 }
 
+* {
+  list-style: none
+}
+
 a {
   text-decoration: none;
 }
@@ -14,6 +18,7 @@ h1 {
   font-family: 'Permanent Marker', cursive;
   margin: 0;
 }
+
 h4 {
   margin-bottom: 0;
 }
@@ -23,11 +28,11 @@ h4 {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
   font-size: 1.5vw;
 }
+
 header a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 header a {
@@ -37,9 +42,9 @@ header a {
 
 nav ul {
   display: flex;
-  list-style: none;
   margin: 0;
   padding: 0;
+
 }
 
 nav ul li {
@@ -64,14 +69,15 @@ section {
 
 .main {
   display: grid;
-  place-items: left; 
+  place-items: left;
   font-size: 1.5vw;
 
 }
+
 .buttons-container {
   display: grid;
   grid-template-columns: 15vw 15vw;
-  grid-template:  1fr 2fr;
+  grid-template: 1fr 2fr;
 
 }
 
@@ -80,82 +86,113 @@ section {
   border-width: 1px;
   border-radius: 25px;
   padding: 1vw 1vw;
-  margin: 0 1vw;
+  margin-right: 2vw ;
   font-size: 1vw;
   text-align: center;
 }
 
-  .buttoncompare {
-    background-color: rgba(77, 149, 89, 1);
-    border-color: rgba(255, 255, 255, 0.007);
-  }
+.buttoncompare {
+  background-color: rgba(77, 149, 89, 1);
+  border-color: rgba(77, 149, 89, 0.021);
+}
 
-  .buttongameplay {
-    background-color: rgba(77, 149, 89, 1);
-    border-color: rgba(255, 255, 255, 0);
-  }
-  .button-icon {
-    vertical-align: middle;
-    width: 1vw; 
-    height: 1vw;}
+.buttongameplay {
+  background-color: rgba(77, 149, 89, 0.041);
+  border-color: rgb(255, 255, 255);
+}
 
-  button:hover {
-    background-color: rgba(34, 141, 61, 0);
-    border-color: white;
-  }
+.button-icon {
+  vertical-align: middle;
+  width: 1vw;
+  height: 1vw;
+}
 
-  /*aside*/
+button:hover {
+  background-color: rgba(34, 141, 61, 0);
+  border-color: white;
+  /* Couleur de l'icône au survol */
+}
 
-  .social-icons {
-    position: absolute;
-    bottom: 5vw;
-    left: 0vw;
-    display: flex;
-    flex-direction: column;
-    color: rgba(172, 172, 172, 0);
-  }
+/*aside*/
 
-  .social-icons a {
-    color: white;
-    font-size: 40px;
+.social-icons {
+  position: absolute;
+  bottom: 5vw;
+  left: 0vw;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
 
-  }
+.social-icons a {
+  color: white;
+  font-size: 2.5vw;
 
-  .social-icons a:hover {
-    color: rgba(77, 149, 89, 1);
-    /* Couleur de l'icône au survol */
-  }
+}
 
-  footer {
-    position: absolute;
-    padding: 1vw;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
+.social-icons a:hover {
+  color: rgba(77, 149, 89, 1);
+  /* Couleur de l'icône au survol */
+}
 
-  .footer-content {
-    display: grid;
-    place-items: center;
-  }
+footer {
+  position: absolute;
+  display: block;
+  padding: 1vw;
+  font-size: 1vw;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 
-  img {
-    position: absolute;
-    margin-top: 5vw;
-    width: 45vw;
-    right: 5vw;
-  }
-  /* Styles de base pour tous les appareils */
+.footer-content {
+  display: grid;
+  place-items: center;
+}
+
+img {
+  position: absolute;
+  margin-top: 5vw;
+  width: 45vw;
+  right: 5vw;
+}
+
+/* Styles de base pour tous les appareils */
 /* ... */
-
+/* Styles à appliquer pour les ordinateurs de bureau et les écrans larges avec une largeur minimale de 1200 pixels */
+@media (min-width: 1440px) {
+  
+  /* Styles spécifiques aux ordinateurs de bureau et écrans larges */
+  /* ... */
+}
+/* Styles à appliquer pour les tablettes avec une largeur minimale de 768 pixels */
+@media (max-width: 1024px) { section {
+  left: 10vw;
+  top: 10vw;}
+  /* Styles spécifiques aux tablettes */
+  /* ... */
+}
 /* Styles à appliquer pour les téléphones mobiles avec une largeur maximale de 767 pixels */
 @media (max-width: 767px) {
   img {
-    width: 25vw;
-    
+    margin-top: 10vw;
+    width: 50vw;
+  }
+
+  .social-icons a {
+    font-size: 6vw;
+  }
+
+  section {
+    left: 20vw;
+    top: 20vw;
+  }
+
+
   /* Styles spécifiques aux téléphones mobiles */
   /* ... */
-}}
+
+}
 
 /* Styles à appliquer pour les tablettes avec une largeur minimale de 768 pixels */
 @media (min-width: 768px) {
@@ -165,7 +202,7 @@ section {
 
 /* Styles à appliquer pour les ordinateurs de bureau et les écrans larges avec une largeur minimale de 1200 pixels */
 @media (min-width: 1200px) {
+ 
   /* Styles spécifiques aux ordinateurs de bureau et écrans larges */
   /* ... */
 }
-  
